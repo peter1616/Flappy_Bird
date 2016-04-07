@@ -34,5 +34,29 @@ public class Matrix4f {
 		return result;
 	}
 	
+	public static Matrix4f translate(Vector3f vector) {
+		Matrix4f result = identity();
+		
+		result.matrix[0 + 3 * 4] = vector.x;
+		result.matrix[1 + 3 * 4] = vector.y;
+		result.matrix[2 + 3 * 4] = vector.z;
+		
+		return result;
+	}
 	
+	public static Matrix4f rotate(float angle) {
+		Matrix4f result = identity();
+		float r = (float) toRadians(angle);
+		float cos = (float) cos(r);
+		float sin = (float) sin(r);
+		
+		result.matrix[0 + 0 * 4] = cos;
+		result.matrix[1 + 0 * 4] = sin;
+		
+		result.matrix[0 + 1 * 4] = -sin;
+		result.matrix[1 + 1 * 4] = cos;
+		
+		return result;
+	}
+
 }
