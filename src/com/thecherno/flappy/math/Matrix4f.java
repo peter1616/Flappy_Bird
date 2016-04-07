@@ -19,5 +19,20 @@ public class Matrix4f {
 		
 		return result;
 	}
-
+	public Matrix4f multiply(Matrix4f matrix) {
+		Matrix4f result = new Matrix4f();
+		
+		for(int y = 0; y < 4; y++) {
+			for (int x = 0; x < 4; x++) {
+				float sum = 0.0f;
+				for (int e = 0; e < 4; e++) {
+					sum += this.matrix[e + y * 4] * matrix.matrix[x + e * 4];
+				}
+				result.matrix[x + y * 4] = sum;
+			}
+		}
+		return result;
+	}
+	
+	
 }
