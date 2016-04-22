@@ -2,7 +2,7 @@ Gra będzie się nazywać Flappy Bird . Polega ona  na  tym ze wcielamy się w p
 
 Do stworzenie projektu „Flappy Bird” wykorzystam środowisko programistyczne języka JAVA – Eclipse
 
-PLAN REALIZACJI:
+PLAN REALIZACJI:                                                                                                                
 1.Instalacja niezbędnego oprogramowania                                                                                         
 2.Stworzenie okna programu.                                                                                                     
 3.Konigurowanie głównego tłą gry
